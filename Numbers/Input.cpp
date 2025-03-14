@@ -3,19 +3,36 @@
 
 using namespace std ;
 
-int main() {
+// int main() {
+//     vector<int> arr ;
+//     string input ;
+//     getline(cin , input);
+//     stringstream ss (input);
+//     int num ;
+//     // char c ; {comma sperated input ke liye}
+//     while( ss >> num ){
+//         arr.push_back(num);
+//         // ss >> c ;  {comma sperated input ke liye}
+//     }
+//     cout << "Output" << "";
+//     for(auto ele: arr){
+//         cout << ele <<" ";
+//     }
+// }
+
+
+int main(){
     vector<int> arr ;
     string input ;
     getline(cin , input);
     stringstream ss (input);
-    int num ;
-    // char c ; {comma sperated input ke liye}
-    while( ss >> num ){
+    int num ; 
+    char c ;
+    while(ss >> num){
         arr.push_back(num);
-        // ss >> c ;  {comma sperated input ke liye}
+        ss >> c ;
     }
-    cout << "Output" << "";
-    for(auto ele: arr){
-        cout << ele <<" ";
+    for(int ele: arr){
+        cout << ele << endl ;
     }
 }

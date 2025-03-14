@@ -14,6 +14,9 @@ int main() {
         else {
             cout << num << "is odd" << endl ;
         }
+
     }
+
     return 0 ;
+    
 }

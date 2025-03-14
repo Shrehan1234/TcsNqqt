@@ -7,12 +7,13 @@ int increasingDecreasing(vector <int> & arr) {
     sort(arr.begin() , arr.end());
     
     for(int i = 0 ; i< n/2 ; i++) {
-        cout << arr[i] << endl ;
+        cout << arr[i] << " " ;
     }
 
     for (int i = n-1 ; i<n/2 ; i--) {
-        cout << arr[i] << endl ;
+        cout << arr[i] << " " ;
     }
+    cout << endl ;
 }
 
 int main() {

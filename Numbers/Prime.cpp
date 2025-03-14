@@ -5,44 +5,32 @@
 using namespace std ;
 
 bool CheckPrime(int n) {
-    int count = 0 ; 
-    for(int i = 0 ; i < sqrt(n); i++){
-        if(n % i == 0){
-            count = count + 1 ;
-        if(n/i != i){
-            count = count + 1 ;
-        }
-        }
+   if(n < 2) return false ;
+   for(int i = 2 ; i <= sqrt(n) ; i++){
+    if(n % i == 0 ){
+        return false ;
     }
-    if(count == 2) {
-        return true;
-    }
-    else {
-        return false;
-    }
+   }
+   return true ;
 }
                             
 int main() {
-    vector<int> arr; 
-    int n ; 
-    while(cin >> n ){
-        arr.push_back(n);
+    vector<int> arr ;
+    string input ;
+    getline(cin , input);
+    stringstream ss (input);
+    int num ; 
+    while(ss >> num){
+        arr.push_back(num);
     }
-    for(int num:arr){
-        if(CheckPrime(num)){
-
-            cout << num << "prime" << endl ;
-
-        }
-
-        else {
-
-            cout << num << "Not prime" << endl ;
-
-        }
-
+   for(int ele: arr){
+    if(CheckPrime(ele)){
+        cout  << "true " << endl ;
     }
-
+    else {
+        cout << "False " <<endl;
+    }
+   }
+   cout << endl ;
     return 0 ;
-    
 }

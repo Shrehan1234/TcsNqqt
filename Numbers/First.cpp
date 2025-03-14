@@ -24,7 +24,7 @@ int main() {
     while(cin >> input){
         for(char c : input) {
             if(isdigit(c) || isalpha(c)){
-                arr.push_back(c);
+                arr.push_back(c);d
             }
         }
     }
